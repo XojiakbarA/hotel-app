@@ -9,4 +9,6 @@ import uz.pdp.hotelapp.model.Room;
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long> {
     Page<Room> findAllByHotelId(Long hotelId, Pageable pageable);
+
+    void deleteAllByHotelId(Long hotelId);
 }
